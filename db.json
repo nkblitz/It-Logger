@@ -1,0 +1,50 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "hard disk not working",
+      "attention": false,
+      "date": "07-07-2020",
+      "tech": "Don",
+      "priority": "High"
+    },
+    {
+      "id": 2,
+      "message": "Printer not working",
+      "attention": true,
+      "date": "07-07-2020",
+      "tech": "Jen",
+      "priority": "Moderate"
+    },
+    {
+      "id": 3,
+      "message": "Mouse not working",
+      "attention": false,
+      "date": "07-07-2020",
+      "tech": "James",
+      "priority": "Low"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "Don",
+      "lastName": "yoyo"
+    },
+    {
+      "id": 2,
+      "firstName": "James",
+      "lastName": "Bond"
+    },
+    {
+      "id": 3,
+      "firstName": "John",
+      "lastName": "Rambo"
+    },
+    {
+      "firstname": "Jen",
+      "lastname": "Law",
+      "id": 4
+    }
+  ]
+}
