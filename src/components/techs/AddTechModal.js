@@ -1,24 +1,34 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addTech } from "../../actions/techActions";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-export const AddTechModal = () => {
+const AddTechModal = ({ addTech }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
   const onSubmit = () => {
-    if (firstName === "" && lastName === "") {
-      M.toast({ html: "enter name" });
+    if (firstName === "" || lastName === "") {
+      M.toast({ html: "Please enter the first and last name" });
     } else {
+      addTech({
+        firstName,
+        lastName,
+      });
+
+      M.toast({ html: `${firstName} ${lastName} was added as a tech` });
+
+      // Clear Fields
       setFirstName("");
       setLastName("");
-      console.log("submitted");
     }
   };
 
   return (
-    <div id="add-tech-modal" className="modal" style={modalStyle}>
+    <div id="add-tech-modal" className="modal">
       <div className="modal-content">
-        <h4>New Tech</h4>
+        <h4>New Technician</h4>
         <div className="row">
           <div className="input-field">
             <input
@@ -32,6 +42,7 @@ export const AddTechModal = () => {
             </label>
           </div>
         </div>
+
         <div className="row">
           <div className="input-field">
             <input
@@ -50,7 +61,7 @@ export const AddTechModal = () => {
         <a
           href="#!"
           onClick={onSubmit}
-          className="modal-close waves-effect blue btn"
+          className="modal-close waves-effect blue waves-light btn"
         >
           Enter
         </a>
@@ -59,9 +70,8 @@ export const AddTechModal = () => {
   );
 };
 
-const modalStyle = {
-  width: "75%",
-  height: "75%",
+AddTechModal.propTypes = {
+  addTech: PropTypes.func.isRequired,
 };
 
-export default AddTechModal;
+export default connect(null, { addTech })(AddTechModal);

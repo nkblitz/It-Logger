@@ -2,27 +2,31 @@
   "logs": [
     {
       "id": 1,
-      "message": "hard disk not working",
-      "attention": false,
-      "date": "07-07-2020",
-      "tech": "Don",
-      "priority": "High"
+      "message": "Hard Disk slow",
+      "attention": true,
+      "tech": "James Bond",
+      "date": "2020-07-12T09:34:42.503Z"
     },
     {
-      "id": 2,
-      "message": "Printer not working",
-      "attention": true,
-      "date": "07-07-2020",
-      "tech": "Jen",
-      "priority": "Moderate"
+      "message": "Printer gone",
+      "attention": false,
+      "tech": "john",
+      "date": "2020-07-12T05:56:32.181Z",
+      "id": 2
     },
     {
       "id": 3,
-      "message": "Mouse not working",
+      "message": "Mouse not working dude",
+      "attention": true,
+      "tech": "john",
+      "date": "2020-07-12T07:21:54.530Z"
+    },
+    {
+      "id": 4,
+      "message": "new one",
       "attention": false,
-      "date": "07-07-2020",
-      "tech": "James",
-      "priority": "Low"
+      "tech": "Jen Law",
+      "date": "2020-07-12T09:34:32.087Z"
     }
   ],
   "techs": [
@@ -42,9 +46,9 @@
       "lastName": "Rambo"
     },
     {
-      "firstname": "Jen",
-      "lastname": "Law",
-      "id": 4
+      "firstName": "Jen",
+      "lastName": "Law",
+      "id": 5
     }
   ]
 }
